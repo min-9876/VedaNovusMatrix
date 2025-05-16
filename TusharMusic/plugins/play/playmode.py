@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from NetflixMusic import app
-from NetflixMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from NetflixMusic.utils.decorators import language
-from NetflixMusic.utils.inline.settings import playmode_users_markup
+from TusharMusic import app
+from TusharMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from TusharMusic.utils.decorators import language
+from TusharMusic.utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS
 
 
