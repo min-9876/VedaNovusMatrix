@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from NetflixMusic.core.mongo import mongodb
+from TusharMusic.core.mongo import mongodb
 
 from .logging import LOGGER
 
