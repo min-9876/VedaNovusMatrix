@@ -1,4 +1,4 @@
-# 🎵 NetflixMusic - The Ultimate Telegram Music Bot
+# 🎵 VedaNovus- The Ultimate Telegram Music Bot
 
 <p align="center">
   <img src="" alt="NetflixMusic Logo" width="1280" height="720">
