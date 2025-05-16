@@ -5,11 +5,11 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from NetflixMusic import LOGGER, app, userbot
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.misc import sudo
-from NetflixMusic.plugins import ALL_MODULES
-from NetflixMusic.utils.database import get_banned_users, get_gbanned
+from TusharMusic import LOGGER, app, userbot
+from TusharMusic.core.call import Tushar
+from TusharMusic.misc import sudo
+from TusharMusic.plugins import ALL_MODULES
+from TusharMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
 
@@ -35,27 +35,27 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("NetflixMusic.plugins" + all_module)
-    LOGGER("NetflixMusic.plugins").info("Successfully Imported Modules...")
+        importlib.import_module("TusharMusic.plugins" + all_module)
+    LOGGER("TusharMusic.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await Netflix.start()
+    await Tushar.start()
     try:
-        await Netflix.stream_call("https://envs.sh/hv-.mp4")
+        await Tushar.stream_call("https://envs.sh/hv-.mp4")
     except NoActiveGroupCall:
-        LOGGER("NetflixMusic").error(
+        LOGGER("TusharMusic").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
         )
         exit()
     except:
         pass
-    await Netflix.decorators()
-    LOGGER("NetflixMusic").info(
+    await Tushar.decorators()
+    LOGGER("TusharMusic").info(
         "\x41\x76\x69\x61\x78\x20\x4d\x75\x73\x69\x63\x20\x53\x74\x61\x72\x74\x65\x64\x20\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6c\x6c\x79\x2e\x0a\x0a\x44\x6f\x6e\x27\x74\x20\x66\x6f\x72\x67\x65\x74\x20\x74\x6f\x20\x76\x69\x73\x69\x74\x20\x40\x41\x76\x69\x61\x78\x4f\x66\x66\x69\x63\x69\x61\x6c"
     )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("NetflixMusic").info("Stopping Netflix Music Bot...")
+    LOGGER("TusharMusic").info("Stopping Tushar Music Bot...")
 
 
 if __name__ == "__main__":
