@@ -1,7 +1,7 @@
 # 🎵 NetflixMusic - The Ultimate Telegram Music Bot
 
 <p align="center">
-  <img src="https://envs.sh/hke.jpg" alt="NetflixMusic Logo" width="1280" height="720">
+  <img src="" alt="NetflixMusic Logo" width="1280" height="720">
 </p>
 
 <p align="center">
