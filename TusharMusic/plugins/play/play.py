@@ -6,22 +6,22 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from NetflixMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.utils import seconds_to_min, time_to_seconds
-from NetflixMusic.utils.channelplay import get_channeplayCB
-from NetflixMusic.utils.decorators.language import languageCB
-from NetflixMusic.utils.decorators.play import PlayWrapper
-from NetflixMusic.utils.formatters import formats
-from NetflixMusic.utils.inline import (
+from TusharMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from TusharMusic.core.call import Tushar
+from TusharMusic.utils import seconds_to_min, time_to_seconds
+from TusharMusic.utils.channelplay import get_channeplayCB
+from TusharMusic.utils.decorators.language import languageCB
+from TusharMusic.utils.decorators.play import PlayWrapper
+from TusharMusic.utils.formatters import formats
+from TusharMusic.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from NetflixMusic.utils.logger import play_logs
-from NetflixMusic.utils.stream.stream import stream
+from TusharMusic.utils.logger import play_logs
+from TusharMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
