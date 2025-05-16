@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.utils.database import set_cmode
-from NetflixMusic.utils.decorators.admins import AdminActual
+from TusharMusic import app
+from TusharMusic.utils.database import set_cmode
+from TusharMusic.utils.decorators.admins import AdminActual
 from config import BANNED_USERS
 
 
