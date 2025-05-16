@@ -1,8 +1,8 @@
-from NetflixMusic.core.bot import Netflix
-from NetflixMusic.core.dir import dirr
-from NetflixMusic.core.git import git
-from NetflixMusic.core.userbot import Userbot
-from NetflixMusic.misc import dbb, heroku
+from TusharMusic.core.bot import Netflix
+from TusharMusic.core.dir import dirr
+from TusharMusic.core.git import git
+from TusharMusic.core.userbot import Userbot
+from TusharMusic.misc import dbb, heroku
 
 from .logging import LOGGER
 
@@ -11,16 +11,12 @@ git()
 dbb()
 heroku()
 
-app = Netflix()
+app = Tushar()
 userbot = Userbot()
 
 
 from .platforms import *
 
-Apple = AppleAPI()
-Carbon = CarbonAPI()
-SoundCloud = SoundAPI()
-Spotify = SpotifyAPI()
-Resso = RessoAPI()
+
 Telegram = TeleAPI()
 YouTube = YouTubeAPI()
