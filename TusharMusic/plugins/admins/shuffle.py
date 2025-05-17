@@ -3,10 +3,10 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.misc import db
-from NetflixMusic.utils.decorators import AdminRightsCheck
-from NetflixMusic.utils.inline import close_markup
+from TusharMusic import app
+from TusharMusic.misc import db
+from TusharMusic.utils.decorators import AdminRightsCheck
+from TusharMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
