@@ -3,7 +3,7 @@
 # 🎵 VedaNovus- The Ultimate Telegram Music Bot
 
 <p align="center">
-  <img src="" alt="TusharMusic Logo" width="1280" height="720">
+  <img src="https://envs.sh/oy3.jpg" alt="TusharMusic Logo" width="1280" height="720">
 </p>
 
 <p align="center">
