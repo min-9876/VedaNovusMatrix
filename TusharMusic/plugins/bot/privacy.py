@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pyrogram.enums import ParseMode
-from NetflixMusic import app
+from TusharMusic import app
 import config
 
 TEXT = f"""
@@ -9,7 +9,7 @@ TEXT = f"""
 
 Your privacy is important to us. To learn more about how we collect, use, and protect your data, please review our Privacy Policy here: [Privacy Policy]({config.PRIVACY_LINK}).
 
-If you have any questions or concerns, feel free to reach out to our [support team](https://t.me/Beats_Support).
+If you have any questions or concerns, feel free to reach out to our [support team](https://t.me/Lovelyappeal).
 """
 
 @app.on_message(filters.command("privacy"))
