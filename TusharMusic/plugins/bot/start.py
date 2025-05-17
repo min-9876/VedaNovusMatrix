@@ -6,10 +6,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from NetflixMusic import app
-from NetflixMusic.misc import _boot_
-from NetflixMusic.plugins.sudo.sudoers import sudoers_list
-from NetflixMusic.utils.database import (
+from TusharMusic import app
+from TusharMusic.misc import _boot_
+from TusharMusic.plugins.sudo.sudoers import sudoers_list
+from TusharMusic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -17,10 +17,10 @@ from NetflixMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from NetflixMusic.utils import bot_sys_stats
-from NetflixMusic.utils.decorators.language import LanguageStart
-from NetflixMusic.utils.formatters import get_readable_time
-from NetflixMusic.utils.inline import help_pannel, private_panel, start_panel
+from TusharMusic.utils import bot_sys_stats
+from TusharMusic.utils.decorators.language import LanguageStart
+from TusharMusic.utils.formatters import get_readable_time
+from TusharMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
