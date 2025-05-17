@@ -140,4 +140,4 @@ TusharMusic is open-source and licensed under the MIT License. See the [LICENSE]
 
 ---
 
-💙 **Enjoy your ultimate music experience with NetflixMusic!** 🚀
+💙 **Enjoy your ultimate music experience with TusharMusic!** 🚀
