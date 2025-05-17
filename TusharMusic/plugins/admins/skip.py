@@ -2,14 +2,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from NetflixMusic import YouTube, app
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.misc import db
-from NetflixMusic.utils.database import get_loop
-from NetflixMusic.utils.decorators import AdminRightsCheck
-from NetflixMusic.utils.inline import close_markup, stream_markup
-from NetflixMusic.utils.stream.autoclear import auto_clean
-from NetflixMusic.utils.thumbnails import gen_thumb
+from TusharMusic import YouTube, app
+from TusharMusic.core.call import Tushar
+from TusharMusic.misc import db
+from TusharMusic.utils.database import get_loop
+from TusharMusic.utils.decorators import AdminRightsCheck
+from TusharMusic.utils.inline import close_markup, stream_markup
+from TusharMusic.utils.stream.autoclear import auto_clean
+from TusharMusic.utils.thumbnails import gen_thumb
 from config import BANNED_USERS
 
 
@@ -48,7 +48,7 @@ async def skip(cli, message: Message, _, chat_id):
                                         ),
                                         reply_markup=close_markup(_),
                                     )
-                                    await Netflix.stop_stream(chat_id)
+                                    await Tushar.stop_stream(chat_id)
                                 except:
                                     return
                                 break
