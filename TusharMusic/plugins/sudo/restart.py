@@ -10,15 +10,15 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import filters
 
 import config
-from NetflixMusic import app
-from NetflixMusic.misc import HAPP, SUDOERS, XCB
-from NetflixMusic.utils.database import (
+from TusharMusic import app
+from TusharMusic.misc import HAPP, SUDOERS, XCB
+from TusharMusic.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from NetflixMusic.utils.decorators.language import language
-from NetflixMusic.utils.pastebin import NetflixBin
+from TusharMusic.utils.decorators.language import language
+from TusharMusic.utils.pastebin import TusharBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -64,13 +64,13 @@ async def update_(client, message, _):
         "tsnrhtdd"[(format // 10 % 10 != 1) * (format % 10 < 4) * format % 10 :: 4],
     )
     for info in repo.iter_commits(f"HEAD..origin/{config.UPSTREAM_BRANCH}"):
-        updates += f"<b>➣ #{info.count()}: <a href={REPO_}/commit/{info}>{info.summary}</a> ʙʏ -> {info.author}</b>\n\t\t\t\t<b>➥ ᴄᴏᴍᴍɪᴛᴇᴅ ᴏɴ :</b> {ordinal(int(datetime.fromtimestamp(info.committed_date).strftime('%d')))} {datetime.fromtimestamp(info.committed_date).strftime('%b')}, {datetime.fromtimestamp(info.committed_date).strftime('%Y')}\n\n"
-    _update_response_ = "<b>ᴀ ɴᴇᴡ ᴜᴩᴅᴀᴛᴇ ɪs ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛʜᴇ ʙᴏᴛ !</b>\n\n➣ ᴩᴜsʜɪɴɢ ᴜᴩᴅᴀᴛᴇs ɴᴏᴡ\n\n<b><u>ᴜᴩᴅᴀᴛᴇs:</u></b>\n\n"
+        updates += f"<b>➣ #{info.count()}: <a href={REPO_}/commit/{info}>{info.summary}</a> by -> {info.author}</b>\n\t\t\t\t<b>➥ committed on :</b> {ordinal(int(datetime.fromtimestamp(info.committed_date).strftime('%d')))} {datetime.fromtimestamp(info.committed_date).strftime('%b')}, {datetime.fromtimestamp(info.committed_date).strftime('%Y')}\n\n"
+    _update_response_ = "<b>A New update is available for the bot!</b>\n\n➣ Pushing update now\n\n<b><u>Updates:</u></b>\n\n"
     _final_updates_ = _update_response_ + updates
     if len(_final_updates_) > 4096:
-        url = await NetflixBin(updates)
+        url = await TusharBin(updates)
         nrs = await response.edit(
-            f"<b>ᴀ ɴᴇᴡ ᴜᴩᴅᴀᴛᴇ ɪs ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛʜᴇ ʙᴏᴛ !</b>\n\n➣ ᴩᴜsʜɪɴɢ ᴜᴩᴅᴀᴛᴇs ɴᴏᴡ\n\n<u><b>ᴜᴩᴅᴀᴛᴇs :</b></u>\n\n<a href={url}>ᴄʜᴇᴄᴋ ᴜᴩᴅᴀᴛᴇs</a>"
+            f"<b>A New update is available for the bot !</b>\n\n➣ Pushing update now\n\n<u><b>updates :</b></u>\n\n<a href={url}>Check updates</a>"
         )
     else:
         nrs = await response.edit(_final_updates_, disable_web_page_preview=True)
@@ -112,13 +112,13 @@ async def update_(client, message, _):
 
 @app.on_message(filters.command(["restart"]) & SUDOERS)
 async def restart_(_, message):
-    response = await message.reply_text("ʀᴇsᴛᴀʀᴛɪɴɢ...")
+    response = await message.reply_text("Restarting...")
     ac_chats = await get_active_chats()
     for x in ac_chats:
         try:
             await app.send_message(
                 chat_id=int(x),
-                text=f"{app.mention} ɪs ʀᴇsᴛᴀʀᴛɪɴɢ...\n\nʙᴀʙʏ ʏᴏᴜ ᴄᴀɴ sᴛᴀʀᴛ ᴩʟᴀʏɪɴɢ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 15-20 sᴇᴄᴏɴᴅs.",
+                text=f"{app.mention} is starting...\n\nYou can start playing again after 15-20 seconds.",
             )
             await remove_active_chat(x)
             await remove_active_video_chat(x)
@@ -132,6 +132,6 @@ async def restart_(_, message):
     except:
         pass
     await response.edit_text(
-        "» ʙᴀʙʏ ʀᴇsᴛᴀʀᴛ ᴘʀᴏᴄᴇss sᴛᴀʀᴛᴇᴅ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ ғᴇᴡ sᴇᴄᴏɴᴅs ᴜɴᴛɪʟ ᴛʜᴇ ʙᴏᴛ sᴛᴀʀᴛs..."
+        "» Restart process started, Please wait for few seconds until the bot starts..."
     )
     os.system(f"kill -9 {os.getpid()} && bash start")
