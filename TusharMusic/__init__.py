@@ -1,4 +1,4 @@
-from TusharMusic.core.bot import Netflix
+from TusharMusic.core.bot import Tushar
 from TusharMusic.core.dir import dirr
 from TusharMusic.core.git import git
 from TusharMusic.core.userbot import Userbot
