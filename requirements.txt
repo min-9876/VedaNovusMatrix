@@ -11,6 +11,7 @@ kurigram==2.1.35
 requests
 speedtest-cli
 tgcrypto
+uvloop
 yt-dlp
 youtube-search
 youtube-search-python
