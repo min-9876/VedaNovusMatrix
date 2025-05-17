@@ -3,8 +3,8 @@ import asyncio
 from datetime import date
 from typing import Dict, List, Union
 
-from NetflixMusic import userbot
-from NetflixMusic.core.mongo import mongodb
+from TusharMusic import userbot
+from TusharMusic.core.mongo import mongodb
 
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser
