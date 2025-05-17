@@ -1,15 +1,15 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.utils import extract_user, int_to_alpha
-from NetflixMusic.utils.database import (
+from TusharMusic import app
+from TusharMusic.utils import extract_user, int_to_alpha
+from TusharMusic.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from NetflixMusic.utils.decorators import AdminActual, language
+from TusharMusic.utils.decorators import AdminActual, language
 from NetflixMusic.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 
