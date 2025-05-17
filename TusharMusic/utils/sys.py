@@ -2,8 +2,8 @@ import time
 
 import psutil
 
-from NetflixMusic.misc import _boot_
-from NetflixMusic.utils.formatters import get_readable_time
+from TusharMusic.misc import _boot_
+from TusharMusic.utils.formatters import get_readable_time
 
 
 async def bot_sys_stats():
