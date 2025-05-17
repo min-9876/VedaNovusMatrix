@@ -28,7 +28,7 @@ TusharMusic is a high-performance Telegram music bot that streams music in voice
 
 ## 🔥 Fix for YouTube Blocking VPS IPs
 If YouTube blocks your VPS IP, follow these steps to bypass restrictions:
-1. **Join our Support Group** – Type `#script` in our [support group](https://t.me/Beats_Support) to get the required script.
+1. **Join our Support Group** – Type `#script` in our [support group](https://t.me/LovelyAppeal) to get the required script.
 2. **Generate Cookies** – Run the script on your Windows PC using VS Code or another software.
 3. **Fork the Repository** – Fork this repo to your GitHub account.
 4. **Upload Cookies** – Place the generated cookies inside the `cookies` folder.
