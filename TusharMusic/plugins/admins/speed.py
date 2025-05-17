@@ -1,13 +1,13 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.misc import SUDOERS, db
-from NetflixMusic.utils import AdminRightsCheck
-from NetflixMusic.utils.database import is_active_chat, is_nonadmin_chat
-from NetflixMusic.utils.decorators.language import languageCB
-from NetflixMusic.utils.inline import close_markup, speed_markup
+from TusharMusic import app
+from TusharMusic.core.call import Tushar
+from TusharMusic.misc import SUDOERS, db
+from TusharMusic.utils import AdminRightsCheck
+from TusharMusic.utils.database import is_active_chat, is_nonadmin_chat
+from TusharMusic.utils.decorators.language import languageCB
+from TusharMusic.utils.inline import close_markup, speed_markup
 from config import BANNED_USERS, adminlist
 
 checker = []
@@ -94,7 +94,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_32"].format(CallbackQuery.from_user.mention),
     )
     try:
-        await Netflix.speedup_stream(
+        await Tushar.speedup_stream(
             chat_id,
             file_path,
             speed,
