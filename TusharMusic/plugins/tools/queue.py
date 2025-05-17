@@ -6,12 +6,12 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from NetflixMusic import app
-from NetflixMusic.misc import db
-from NetflixMusic.utils import NetflixBin, get_channeplayCB, seconds_to_min
-from NetflixMusic.utils.database import get_cmode, is_active_chat, is_music_playing
-from NetflixMusic.utils.decorators.language import language, languageCB
-from NetflixMusic.utils.inline import queue_back_markup, queue_markup
+from TusharMusic import app
+from TusharMusic.misc import db
+from TusharMusic.utils import TusharBin, get_channeplayCB, seconds_to_min
+from TusharMusic.utils.database import get_cmode, is_active_chat, is_music_playing
+from TusharMusic.utils.decorators.language import language, languageCB
+from TusharMusic.utils.inline import queue_back_markup, queue_markup
 from config import BANNED_USERS
 
 basic = {}
