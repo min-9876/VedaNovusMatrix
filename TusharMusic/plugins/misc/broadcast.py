@@ -4,17 +4,17 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
-from NetflixMusic import app
-from NetflixMusic.misc import SUDOERS
-from NetflixMusic.utils.database import (
+from TusharMusic import app
+from TusharMusic.misc import SUDOERS
+from TusharMusic.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
     get_served_chats,
     get_served_users,
 )
-from NetflixMusic.utils.decorators.language import language
-from NetflixMusic.utils.formatters import alpha_to_int
+from TusharMusic.utils.decorators.language import language
+from TusharMusic.utils.formatters import alpha_to_int
 from config import adminlist
 
 IS_BROADCASTING = False
