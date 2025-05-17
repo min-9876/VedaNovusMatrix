@@ -31,7 +31,7 @@ def private_panel(_):
         ],
         [
             InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
-            InlineKeyboardButton(text=_["S_B_7"], url="https://envs.sh/6I5.mp4"),
+            InlineKeyboardButton(text=_["S_B_7"], url="https://github.com/SudarshanTushar/VedaNovusMatrix"),
         ],
     ]
     return buttons
