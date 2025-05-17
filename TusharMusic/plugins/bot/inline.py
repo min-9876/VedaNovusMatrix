@@ -5,8 +5,8 @@ from pyrogram.types import (
 )
 from youtubesearchpython.__future__ import VideosSearch
 
-from NetflixMusic import app
-from NetflixMusic.utils.inlinequery import answer
+from TusharMusic import app
+from TusharMusic.utils.inlinequery import answer
 from config import BANNED_USERS
 
 
@@ -36,22 +36,22 @@ async def inline_query_handler(client, query):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʏᴏᴜᴛᴜʙᴇ 🎄",
+                            text="Youtube 🎄",
                             url=link,
                         )
                     ],
                 ]
             )
             searched_text = f"""
-❄ <b>ᴛɪᴛʟᴇ :</b> <a href={link}>{title}</a>
+❄ <b>Title :</b> <a href={link}>{title}</a>
 
-⏳ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration} ᴍɪɴᴜᴛᴇs
-👀 <b>ᴠɪᴇᴡs :</b> <code>{views}</code>
-🎥 <b>ᴄʜᴀɴɴᴇʟ :</b> <a href={channellink}>{channel}</a>
-⏰ <b>ᴘᴜʙʟɪsʜᴇᴅ ᴏɴ :</b> {published}
+⏳ <b>Duration :</b> {duration} minutes
+👀 <b>Views :</b> <code>{views}</code>
+🎥 <b>Channel :</b> <a href={channellink}>{channel}</a>
+⏰ <b>Published on:</b> {published}
 
 
-<u><b>➻ ɪɴʟɪɴᴇ sᴇᴀʀᴄʜ ᴍᴏᴅᴇ ʙʏ {app.name}</b></u>"""
+<u><b>➻ Inline search mode by{app.name}</b></u>"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,
