@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from NetflixMusic import app
-from NetflixMusic.misc import SUDOERS
-from NetflixMusic.utils.database import add_off, add_on
-from NetflixMusic.utils.decorators.language import language
+from TusharMusic import app
+from TusharMusic.misc import SUDOERS
+from TusharMusic.utils.database import add_off, add_on
+from TusharMusic.utils.decorators.language import language
 
 
 @app.on_message(filters.command(["logger"]) & SUDOERS)
