@@ -32,7 +32,7 @@ async def stream(
     if not result:
         return
     if forceplay:
-        await Netflix.force_stop_stream(chat_id)
+        await Tushar.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
@@ -341,7 +341,7 @@ async def stream(
             n, file_path = await YouTube.video(link)
             if n == 0:
                 raise AssistantErr(_["str_3"])
-            await Netflix.join_call(
+            await Tushar.join_call(
                 chat_id,
                 original_chat_id,
                 file_path,
@@ -399,7 +399,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Netflix.join_call(
+            await Tushar.join_call(
                 chat_id,
                 original_chat_id,
                 link,
