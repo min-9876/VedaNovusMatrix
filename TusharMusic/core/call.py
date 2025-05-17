@@ -17,9 +17,9 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from NetflixMusic import LOGGER, YouTube, app
-from NetflixMusic.misc import db
-from NetflixMusic.utils.database import (
+from TusharMusic import LOGGER, YouTube, app
+from TusharMusic.misc import db
+from TusharMusic.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -31,11 +31,11 @@ from NetflixMusic.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from NetflixMusic.utils.exceptions import AssistantErr
-from NetflixMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
-from NetflixMusic.utils.inline.play import stream_markup
-from NetflixMusic.utils.stream.autoclear import auto_clean
-from NetflixMusic.utils.thumbnails import gen_thumb
+from TusharMusic.utils.exceptions import AssistantErr
+from TusharMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
+from TusharMusic.utils.inline.play import stream_markup
+from TusharMusic.utils.stream.autoclear import auto_clean
+from TusharMusic.utils.thumbnails import gen_thumb
 from strings import get_string
 
 autoend = {}
@@ -598,4 +598,4 @@ class Call(PyTgCalls):
             await self.change_stream(client, update.chat_id)
 
 
-Netflix = Call()
+Tushar = Call()
