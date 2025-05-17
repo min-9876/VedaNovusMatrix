@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/github/stars/SudarshanTushar/VedaNovusMatrix?style=for-the-badge&color=blue" alt="GitHub stars">
   <img src="https://img.shields.io/github/forks/SudarshanTushar/VedaNovusMatrix?style=for-the-badge&color=blue" alt="GitHub forks">
   <img src="https://img.shields.io/github/issues/SudarshanTushar/VedaNovusMatrix?style=for-the-badge&color=red" alt="GitHub issues">
-  <img src="https://img.shields.io/github/licence/SudarshanTushar/VedaNovusMatrix?style=for-the-badge&color=green" alt="GitHub license">
+  <img src="https://img.shields.io/github/license/SudarshanTushar/VedaNovusMatrix?style=for-the-badge&color=green" alt="GitHub license">
 
 </p>
 
