@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.utils.database import get_loop, set_loop
-from NetflixMusic.utils.decorators import AdminRightsCheck
-from NetflixMusic.utils.inline import close_markup
+from TusharMusic import app
+from TusharMusic.utils.database import get_loop, set_loop
+from TusharMusic.utils.decorators import AdminRightsCheck
+from TusharMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
