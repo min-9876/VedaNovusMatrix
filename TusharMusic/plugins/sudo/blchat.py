@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.misc import SUDOERS
-from NetflixMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from NetflixMusic.utils.decorators.language import language
+from TusharMusic import app
+from TusharMusic.misc import SUDOERS
+from TusharMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from TusharMusic.utils.decorators.language import language
 from config import BANNED_USERS
 
 
@@ -52,7 +52,7 @@ async def all_chats(client, message: Message, _):
         try:
             title = (await app.get_chat(chat_id)).title
         except:
-            title = "ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+            title = "Private chat"
         j = 1
         text += f"{count}. {title}[<code>{chat_id}</code>]\n"
     if j == 0:
