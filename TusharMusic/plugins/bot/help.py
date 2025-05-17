@@ -3,11 +3,11 @@ from typing import Union
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from NetflixMusic import app
-from NetflixMusic.utils import help_pannel
-from NetflixMusic.utils.database import get_lang
-from NetflixMusic.utils.decorators.language import LanguageStart, languageCB
-from NetflixMusic.utils.inline.help import help_back_markup, private_help_panel
+from TusharMusic import app
+from TusharMusic.utils import help_pannel
+from TusharMusic.utils.database import get_lang
+from TusharMusic.utils.decorators.language import LanguageStart, languageCB
+from TusharMusic.utils.inline.help import help_back_markup, private_help_panel
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
 from strings import get_string, helpers
 
