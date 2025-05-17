@@ -31,7 +31,7 @@ async def inline_query_handler(client, query):
             channel = result[x]["channel"]["name"]
             link = result[x]["link"]
             published = result[x]["publishedTime"]
-            description = f"{views} | {duration} ᴍɪɴᴜᴛᴇs | {channel}  | {published}"
+            description = f"{views} | {duration} minutes | {channel}  | {published}"
             buttons = InlineKeyboardMarkup(
                 [
                     [
