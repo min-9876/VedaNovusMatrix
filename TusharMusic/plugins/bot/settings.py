@@ -8,8 +8,8 @@ from pyrogram.types import (
     Message,
 )
 
-from NetflixMusic import app
-from NetflixMusic.utils.database import (
+from TusharMusic import app
+from TusharMusic.utils.database import (
     add_nonadmin_chat,
     get_authuser,
     get_authuser_names,
@@ -25,16 +25,16 @@ from NetflixMusic.utils.database import (
     skip_off,
     skip_on,
 )
-from NetflixMusic.utils import bot_sys_stats
-from NetflixMusic.utils.decorators.admins import ActualAdminCB
-from NetflixMusic.utils.decorators.language import language, languageCB
-from NetflixMusic.utils.inline.settings import (
+from TusharMusic.utils import bot_sys_stats
+from TusharMusic.utils.decorators.admins import ActualAdminCB
+from TusharMusic.utils.decorators.language import language, languageCB
+from TusharMusic.utils.inline.settings import (
     auth_users_markup,
     playmode_users_markup,
     setting_markup,
     vote_mode_markup,
 )
-from NetflixMusic.utils.inline.start import private_panel
+from TusharMusic.utils.inline.start import private_panel
 from config import BANNED_USERS, OWNER_ID
 
 
