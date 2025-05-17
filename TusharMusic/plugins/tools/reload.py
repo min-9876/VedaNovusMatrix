@@ -5,12 +5,12 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
-from NetflixMusic import app
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.misc import db
-from NetflixMusic.utils.database import get_assistant, get_authuser_names, get_cmode
-from NetflixMusic.utils.decorators import ActualAdminCB, AdminActual, language
-from NetflixMusic.utils.formatters import alpha_to_int, get_readable_time
+from TusharMusic import app
+from TusharMusic.core.call import Tushar
+from TusharMusic.misc import db
+from TusharMusic.utils.database import get_assistant, get_authuser_names, get_cmode
+from TusharMusic.utils.decorators import ActualAdminCB, AdminActual, language
+from TusharMusic.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
 
 rel = {}
@@ -53,7 +53,7 @@ async def restartbot(client, message: Message, _):
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
-        await Netflix.stop_stream_force(message.chat.id)
+        await Tushar.stop_stream_force(message.chat.id)
     except:
         pass
     userbot = await get_assistant(message.chat.id)
@@ -80,7 +80,7 @@ async def restartbot(client, message: Message, _):
             pass
         try:
             db[chat_id] = []
-            await Netflix.stop_stream_force(chat_id)
+            await Tushar.stop_stream_force(chat_id)
         except:
             pass
     return await mystic.edit_text(_["reload_5"].format(app.mention))
@@ -92,7 +92,7 @@ async def close_menu(_, CallbackQuery):
         await CallbackQuery.answer()
         await CallbackQuery.message.delete()
         await CallbackQuery.message.reply_text(
-            f"Cʟᴏsᴇᴅ ʙʏ : {CallbackQuery.from_user.mention}"
+            f"Closed by : {CallbackQuery.from_user.mention}"
         )
     except:
         pass
