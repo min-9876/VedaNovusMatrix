@@ -6,8 +6,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from NetflixMusic import app
-from NetflixMusic.utils.formatters import (
+from TusharMusic import app
+from TusharMusic.utils.formatters import (
     check_duration,
     convert_bytes,
     get_readable_time,
@@ -37,9 +37,9 @@ class TeleAPI:
         try:
             file_name = file.file_name
             if file_name is None:
-                file_name = "ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴅɪᴏ" if audio else "ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏ"
+                file_name = "Telegram Audio" if audio else "Telegram video"
         except:
-            file_name = "ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴅɪᴏ" if audio else "ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏ"
+            file_name = "Telegram Audio" if audio else "Telegram video"
         return file_name
 
     async def get_duration(self, file):
@@ -110,7 +110,7 @@ class TeleAPI:
                     [
                         [
                             InlineKeyboardButton(
-                                text="ᴄᴀɴᴄᴇʟ",
+                                text="Cancel",
                                 callback_data="stop_downloading",
                             ),
                         ]
@@ -161,7 +161,7 @@ class TeleAPI:
                         int(int(time.time()) - int(speed_counter[message.id]))
                     )
                 except:
-                    elapsed = "0 sᴇᴄᴏɴᴅs"
+                    elapsed = "0 Seconds"
                 await mystic.edit_text(_["tg_2"].format(elapsed))
             except:
                 await mystic.edit_text(_["tg_3"])
