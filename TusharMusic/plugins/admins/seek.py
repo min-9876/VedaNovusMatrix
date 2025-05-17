@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import YouTube, app
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.misc import db
-from NetflixMusic.utils import AdminRightsCheck, seconds_to_min
-from NetflixMusic.utils.inline import close_markup
+from TusharMusic import YouTube, app
+from TusharMusic.core.call import Tushar
+from TusharMusic.misc import db
+from TusharMusic.utils import AdminRightsCheck, seconds_to_min
+from TusharMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
@@ -56,7 +56,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if "index_" in file_path:
         file_path = playing[0]["vidid"]
     try:
-        await Netflix.seek_stream(
+        await Tushar.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),
