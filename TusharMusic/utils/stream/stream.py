@@ -5,15 +5,15 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from NetflixMusic import Carbon, YouTube, app
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.misc import db
-from NetflixMusic.utils.database import add_active_video_chat, is_active_chat
-from NetflixMusic.utils.exceptions import AssistantErr
-from NetflixMusic.utils.inline import aq_markup, close_markup, stream_markup
-from NetflixMusic.utils.pastebin import NetflixBin
-from NetflixMusic.utils.stream.queue import put_queue, put_queue_index
-from NetflixMusic.utils.thumbnails import gen_thumb
+from TusharMusic import Carbon, YouTube, app
+from TusharMusic.core.call import Tushar
+from TusharMusic.misc import db
+from TusharMusic.utils.database import add_active_video_chat, is_active_chat
+from TusharMusic.utils.exceptions import AssistantErr
+from TusharMusic.utils.inline import aq_markup, close_markup, stream_markup
+from TusharMusic.utils.pastebin import NetflixBin
+from TusharMusic.utils.stream.queue import put_queue, put_queue_index
+from TusharMusic.utils.thumbnails import gen_thumb
 
 
 async def stream(
@@ -79,7 +79,7 @@ async def stream(
                     )
                 except:
                     raise AssistantErr(_["play_14"])
-                await Netflix.join_call(
+                await Tushar.join_call(
                     chat_id,
                     original_chat_id,
                     file_path,
@@ -116,7 +116,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await NetflixBin(msg)
+            link = await TusharBin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
