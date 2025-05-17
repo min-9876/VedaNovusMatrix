@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.misc import SUDOERS
-from NetflixMusic.utils.database import add_sudo, remove_sudo
-from NetflixMusic.utils.decorators.language import language
-from NetflixMusic.utils.extraction import extract_user
-from NetflixMusic.utils.inline import close_markup
+from TusharMusic import app
+from TusharMusic.misc import SUDOERS
+from TusharMusic.utils.database import add_sudo, remove_sudo
+from TusharMusic.utils.decorators.language import language
+from TusharMusic.utils.extraction import extract_user
+from TusharMusic.utils.inline import close_markup
 from config import BANNED_USERS, OWNER_ID
 
 
