@@ -10,7 +10,7 @@ from TusharMusic.utils.database import (
     save_authuser,
 )
 from TusharMusic.utils.decorators import AdminActual, language
-from NetflixMusic.utils.inline import close_markup
+from TusharMusic.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 
 
