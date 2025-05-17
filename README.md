@@ -1,4 +1,4 @@
-# 🎵 VedaNovus- The Ultimate Telegram Music Bot
+# 🎵 VedaNovus- The Ultimate Telegram Music Bot Under the VedaNovusMatrix
 
 <p align="center">
   <img src="" alt="NetflixMusic Logo" width="1280" height="720">
@@ -12,8 +12,8 @@
 
 </p>
 
-## 🚀 About NetflixMusic
-NetflixMusic is a high-performance Telegram music bot that streams music in voice chats with premium-quality audio. It supports multiple streaming sources like **YouTube, Spotify, Apple Music**, and more! Optimized with **Docker & GitHub Actions**, it ensures smooth deployment and operation.
+## 🚀 About TusharMusic 
+TusharMusic is a high-performance Telegram music bot that streams music in voice chats with premium-quality audio. It supports multiple streaming sources like **YouTube, Spotify, Apple Music**, and more! Optimized with **Docker & GitHub Actions**, it ensures smooth deployment and operation.
 
 ## ✨ Features
 ✅ **Multi-Source Streaming** – Play music from YouTube, Spotify, SoundCloud, and more.
@@ -64,7 +64,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash 
 
 ### 5️⃣ Clone the Repository
 ```bash
-git clone https://github.com/MrDevloaper/NetflixMusic && cd NetflixMusic
+git clone https://github.com/SudarshanTushar/VedaNovusMatrix && cd TusharMusic
 ```
 
 ### 6️⃣ Install Required Python Packages
@@ -111,17 +111,17 @@ For a full command list, use `/help` in [Telegram](https://t.me/Netflix_Musicbot
 
 ## 🔄 Stay Updated
 <p align="center">
-  <a href="https://t.me/Netflix_Music_Support">
+  <a href="https://t.me/LovelyAppeal">
     <img src="https://img.shields.io/badge/Join-Support%20Group-blue?style=for-the-badge&logo=telegram">
   </a>
-  <a href="https://telegram.me/Beats_Support">
+  <a href="https://telegram.me/AboutVedmat">
     <img src="https://img.shields.io/badge/Join-Update%20Channel-blue?style=for-the-badge&logo=telegram">
   </a>
 </p>
 
 ---
 
-## 🤝 Contribute to NetflixMusic
+## 🤝 Contribute to TusharMusic 
 We welcome contributions from the community! To contribute:
 1. **Fork** this repository.
 2. **Create a feature branch** for your updates.
@@ -129,12 +129,12 @@ We welcome contributions from the community! To contribute:
 4. **Submit a pull request** to our `master` branch.
 5. Our team will review and merge your contributions.
 
-For queries, reach out to us on [Telegram](https://t.me/Netflix_Music_Support).
+For queries, reach out to us on [Telegram](https://t.me/LovelyAppeal).
 
 ---
 
 ## 📜 License
-NetflixMusic is open-source and licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+TusharMusic is open-source and licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
