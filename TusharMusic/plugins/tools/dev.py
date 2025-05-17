@@ -10,7 +10,7 @@ from time import time
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from NetflixMusic import app
+from TusharMusic import app
 from config import OWNER_ID
 
 
@@ -70,7 +70,7 @@ async def executor(client: app, message: Message):
         evaluation += stdout
     else:
         evaluation += "Success"
-    final_output = f"<b>⥤ ʀᴇsᴜʟᴛ :</b>\n<pre language='python'>{evaluation}</pre>"
+    final_output = f"<b>⥤ result :</b>\n<pre language='python'>{evaluation}</pre>"
     if len(final_output) > 4096:
         filename = "output.txt"
         with open(filename, "w+", encoding="utf8") as out_file:
@@ -88,7 +88,7 @@ async def executor(client: app, message: Message):
         )
         await message.reply_document(
             document=filename,
-            caption=f"<b>⥤ ᴇᴠᴀʟ :</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ ʀᴇsᴜʟᴛ :</b>\nAttached Document",
+            caption=f"<b>⥤ eval :</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ result :</b>\nAttached Document",
             quote=False,
             reply_markup=keyboard,
         )
@@ -127,7 +127,7 @@ async def forceclose_command(_, CallbackQuery):
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(
-                "» ɪᴛ'ʟʟ ʙᴇ ʙᴇᴛᴛᴇʀ ɪғ ʏᴏᴜ sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪᴍɪᴛs.", show_alert=True
+                "» I'll be better if you stay in your limits.", show_alert=True
             )
         except:
             return
@@ -152,7 +152,7 @@ async def forceclose_command(_, CallbackQuery):
 )
 async def shellrunner(_, message: Message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="<b>ᴇxᴀᴍᴩʟᴇ :</b>\n/sh git pull")
+        return await edit_or_reply(message, text="<b>Example :</b>\n/sh git pull")
     text = message.text.split(None, 1)[1]
     if "\n" in text:
         code = text.split("\n")
