@@ -9,9 +9,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from NetflixMusic import YouTube, app
-from NetflixMusic.misc import SUDOERS
-from NetflixMusic.utils.database import (
+from TusharMusic import YouTube, app
+from TusharMusic.misc import SUDOERS
+from TusharMusic.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -20,7 +20,7 @@ from NetflixMusic.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from NetflixMusic.utils.inline import botplaylist_markup
+from TusharMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_GROUP, adminlist
 from strings import get_string
 
@@ -36,7 +36,7 @@ def PlayWrapper(command):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ?",
+                            text="How to fix?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -47,7 +47,7 @@ def PlayWrapper(command):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    text=f"{app.mention} is under maintenance, visit <a href={SUPPORT_GROUP}>Support chat</a> For knowing the reason.",
                     disable_web_page_preview=True,
                 )
                 
