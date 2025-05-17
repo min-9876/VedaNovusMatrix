@@ -3,11 +3,11 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.utils import bot_sys_stats
-from NetflixMusic.utils.decorators.language import language
-from NetflixMusic.utils.inline import supp_markup
+from TusharMusic import app
+from TusharMusic.core.call import Tushar
+from TusharMusic.utils import bot_sys_stats
+from TusharMusic.utils.decorators.language import language
+from TusharMusic.utils.inline import supp_markup
 from config import BANNED_USERS, PING_IMG_URL
 
 
@@ -19,7 +19,7 @@ async def ping_com(client, message: Message, _):
         photo=PING_IMG_URL,
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await Netflix.ping()
+    pytgping = await Tushar.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
