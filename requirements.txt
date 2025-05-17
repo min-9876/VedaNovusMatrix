@@ -7,6 +7,7 @@ heroku3
 motor
 py-tgcalls==0.9.7
 pykeyboard
+python-dotenv
 kurigram==2.1.35
 requests
 speedtest-cli
