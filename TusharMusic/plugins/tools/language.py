@@ -2,9 +2,9 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 
-from NetflixMusic import app
-from NetflixMusic.utils.database import get_lang, set_lang
-from NetflixMusic.utils.decorators import ActualAdminCB, language, languageCB
+from TusharMusic import app
+from TusharMusic.utils.database import get_lang, set_lang
+from TusharMusic.utils.decorators import ActualAdminCB, language, languageCB
 from config import BANNED_USERS
 from strings import get_string, languages_present
 
