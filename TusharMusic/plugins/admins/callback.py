@@ -3,10 +3,10 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from NetflixMusic import YouTube, app
-from NetflixMusic.core.call import Netflix
-from NetflixMusic.misc import SUDOERS, db
-from NetflixMusic.utils.database import (
+from TusharMusic import YouTube, app
+from TusharMusic.core.call import Tushar
+from TusharMusic.misc import SUDOERS, db
+from TusharMusic.utils.database import (
     get_active_chats,
     get_lang,
     get_upvote_count,
@@ -17,11 +17,11 @@ from NetflixMusic.utils.database import (
     music_on,
     set_loop,
 )
-from NetflixMusic.utils.decorators.language import languageCB
-from NetflixMusic.utils.formatters import seconds_to_min
-from NetflixMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
-from NetflixMusic.utils.stream.autoclear import auto_clean
-from NetflixMusic.utils.thumbnails import gen_thumb
+from TusharMusic.utils.decorators.language import languageCB
+from TusharMusic.utils.formatters import seconds_to_min
+from TusharMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
+from TusharMusic.utils.stream.autoclear import auto_clean
+from TusharMusic.utils.thumbnails import gen_thumb
 from config import (
     BANNED_USERS,
     SOUNCLOUD_IMG_URL,
@@ -160,7 +160,7 @@ async def del_back_playlist(client, CallbackQuery, _):
     elif command == "Skip" or command == "Replay":
         check = db.get(chat_id)
         if command == "Skip":
-            txt = f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+            txt = f"➻ Stream skipped 🎄\n│ \nby : {mention} 🥀"
             popped = None
             try:
                 popped = check.pop(0)
@@ -168,7 +168,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     await auto_clean(popped)
                 if not check:
                     await CallbackQuery.edit_message_text(
-                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+                        f"➻ stream skipped 🎄\n│ \nby : {mention} 🥀"
                     )
                     await CallbackQuery.message.reply_text(
                         text=_["admin_6"].format(
@@ -177,13 +177,13 @@ async def del_back_playlist(client, CallbackQuery, _):
                         reply_markup=close_markup(_),
                     )
                     try:
-                        return await Netflix.stop_stream(chat_id)
+                        return await Tushar.stop_stream(chat_id)
                     except:
                         return
             except:
                 try:
                     await CallbackQuery.edit_message_text(
-                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+                        f"➻ stream skipped 🎄\n│ \nby : {mention} 🥀"
                     )
                     await CallbackQuery.message.reply_text(
                         text=_["admin_6"].format(
@@ -195,7 +195,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 except:
                     return
         else:
-            txt = f"➻ sᴛʀᴇᴀᴍ ʀᴇ-ᴘʟᴀʏᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+            txt = f"➻ Stream re-played 🎄\n│ \nby : {mention} 🥀"
         await CallbackQuery.answer()
         queued = check[0]["file"]
         title = (check[0]["title"]).title()
