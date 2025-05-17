@@ -9,13 +9,13 @@ from pyrogram.types import InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from NetflixMusic import app
-from NetflixMusic.core.userbot import assistants
-from NetflixMusic.misc import SUDOERS, mongodb
-from NetflixMusic.plugins import ALL_MODULES
-from NetflixMusic.utils.database import get_served_chats, get_served_users, get_sudoers,is_autoend,is_autoleave
-from NetflixMusic.utils.decorators.language import language, languageCB
-from NetflixMusic.utils.inline.stats import back_stats_buttons, stats_buttons
+from TusharMusic import app
+from TusharMusic.core.userbot import assistants
+from TusharMusic.misc import SUDOERS, mongodb
+from TusharMusic.plugins import ALL_MODULES
+from TusharMusic.utils.database import get_served_chats, get_served_users, get_sudoers,is_autoend,is_autoleave
+from TusharMusic.utils.decorators.language import language, languageCB
+from TusharMusic.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
 
 
@@ -94,7 +94,7 @@ async def bot_stats(client, CallbackQuery, _):
         else:
             cpu_freq = f"{round(cpu_freq, 2)}ᴍʜᴢ"
     except:
-        cpu_freq = "ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ"
+        cpu_freq = "Failed to fetch"
     hdd = psutil.disk_usage("/")
     total = hdd.total / (1024.0**3)
     used = hdd.used / (1024.0**3)
