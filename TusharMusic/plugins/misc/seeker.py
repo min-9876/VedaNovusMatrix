@@ -1,7 +1,7 @@
 import asyncio
 
-from NetflixMusic.misc import db
-from NetflixMusic.utils.database import get_active_chats, is_music_playing
+from TusharMusic.misc import db
+from TusharMusic.utils.database import get_active_chats, is_music_playing
 
 
 async def timer():
