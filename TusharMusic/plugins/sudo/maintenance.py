@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from NetflixMusic import app
-from NetflixMusic.misc import SUDOERS
-from NetflixMusic.utils.database import (
+from TusharMusic import app
+from TusharMusic.misc import SUDOERS
+from TusharMusic.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,
