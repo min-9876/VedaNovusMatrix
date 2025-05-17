@@ -1,5 +1,5 @@
-from NetflixMusic import app
-from NetflixMusic.utils.database import get_cmode
+from TusharMusic import app
+from TusharMusic.utils.database import get_cmode
 
 
 async def get_channeplayCB(_, command, CallbackQuery):
