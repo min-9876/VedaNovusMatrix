@@ -1,9 +1,9 @@
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from NetflixMusic import app
-from NetflixMusic.misc import SUDOERS, db
-from NetflixMusic.utils.database import (
+from TusharMusic import app
+from TusharMusic.misc import SUDOERS, db
+from TusharMusic.utils.database import (
     get_authuser_names,
     get_cmode,
     get_lang,
@@ -24,7 +24,7 @@ def AdminRightsCheck(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    text=f"{app.mention} is under maintainance, visit<a href={SUPPORT_GROUP}>Support chat</a> For knowing the reason.",
                     disable_web_page_preview=True,
                 )
 
@@ -43,7 +43,7 @@ def AdminRightsCheck(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ?",
+                            text="How to fix ?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -72,11 +72,11 @@ def AdminRightsCheck(mystic):
                     if message.from_user.id not in admins:
                         if await is_skipmode(message.chat.id):
                             upvote = await get_upvote_count(chat_id)
-                            text = f"""<b>ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɴᴇᴇᴅᴇᴅ</b>
+                            text = f"""<b>Admin tiyr</b>
 
-ʀᴇғʀᴇsʜ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ ᴠɪᴀ : /reload
+Refresh admin cache via : /reload
 
-» {upvote} ᴠᴏᴛᴇs ɴᴇᴇᴅᴇᴅ ғᴏʀ ᴘᴇʀғᴏʀᴍɪɴɢ ᴛʜɪs ᴀᴄᴛɪᴏɴ."""
+» {upvote} Voted needed for performing this action."""
 
                             command = message.command[0]
                             if command[0] == "c":
@@ -120,7 +120,7 @@ def AdminActual(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    text=f"{app.mention} is under maintenance, visit<a href={SUPPORT_GROUP}>Support chat</a> for knowing the reason.",
                     disable_web_page_preview=True,
                 )
 
@@ -139,7 +139,7 @@ def AdminActual(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ?",
+                            text="How to fix?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -165,7 +165,7 @@ def ActualAdminCB(mystic):
         if await is_maintenance() is False:
             if CallbackQuery.from_user.id not in SUDOERS:
                 return await CallbackQuery.answer(
-                    f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    f"{app.mention} is under maintenance, visit support for knowing the reason.",
                     show_alert=True,
                 )
         try:
