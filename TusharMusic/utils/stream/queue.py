@@ -1,8 +1,8 @@
 import asyncio
 from typing import Union
 
-from NetflixMusic.misc import db
-from NetflixMusic.utils.formatters import check_duration, seconds_to_min
+from TusharMusic.misc import db
+from TusharMusic.utils.formatters import check_duration, seconds_to_min
 from config import autoclean, time_to_seconds
 
 
@@ -65,7 +65,7 @@ async def put_queue_index(
             )
             duration = seconds_to_min(dur)
         except:
-            duration = "ᴜʀʟ sᴛʀᴇᴀᴍ"
+            duration = "url stream"
             dur = 0
     else:
         dur = 0
