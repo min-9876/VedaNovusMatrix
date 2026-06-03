@@ -51,8 +51,8 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("Angel_Ki_Family")
-                await self.one.join_chat("UR_DREAM_WORLD")
+                await self.one.join_chat("vip_king1999")
+                await self.one.join_chat("myanmarbot_music")
             except:
                 pass
             assistants.append(1)
@@ -72,8 +72,8 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("Angel_Ki_Family")
-                await self.one.join_chat("UR_DREAM_WORLD")
+                await self.two.join_chat("vip_king1999")
+                await self.one.join_chat("myanmarbot_music")
             except:
                 pass
             assistants.append(2)
@@ -93,8 +93,8 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("Angel_Ki_Family")
-                await self.one.join_chat("UR_DREAM_WORLD")
+                await self.three.join_chat("vip_king1999")
+                await self.one.join_chat("myanmarbot_music")
             except:
                 pass
             assistants.append(3)
@@ -114,8 +114,8 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("Angel_Ki_Family")
-                await self.one.join_chat("UR_DREAM_WORLD")
+                await self.four.join_chat("myanmarbot_music")
+                await self.one.join_chat("vip_king1999")
             except:
                 pass
             assistants.append(4)
@@ -135,8 +135,8 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("Angel_Ki_Family")
-                await self.one.join_chat("UR_DREAM_WORLD")
+                await self.five.join_chat("vip_king1999")
+                await self.one.join_chat("myanmarbot_music")
             except:
                 pass
             assistants.append(5)
