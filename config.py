@@ -39,14 +39,14 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/VedaNovus")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/Aboutvedmat")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/vip_king1999")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/myanmar_music_Bot2027")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 
 # make your bots privacy from telegra.ph and put your url here 
-PRIVACY_LINK = getenv("PRIVACY_LINK", "https://telegra.ph/Privacy-Policy-for-AviaxMusic-08-14")
+PRIVACY_LINK = getenv("PRIVACY_LINK", "https://graph.org/%E1%80%80%E1%80%9A%E1%80%9B%E1%80%A1%E1%80%81%E1%80%80%E1%80%A1%E1%80%9C%E1%80%80-%E1%80%91%E1%80%94%E1%80%9E%E1%80%99%E1%80%99-%E1%80%99%E1%80%9D%E1%80%92-Privacy-Policy-02-24")
 
 
 # Get this credentials from https://developer.spotify.com/dashboard
@@ -81,10 +81,10 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://envs.sh/oy3.jpg"
+    "START_IMG_URL", "https://files.catbox.moe/4wdkm1.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://envs.sh/oy3.jpg"
+    "PING_IMG_URL", "https://graph.org//file/389a372e8ae039320ca6c.png"
 )
 PLAYLIST_IMG_URL = "https://envs.sh/oy3.jpg"
 STATS_IMG_URL = "https://envs.sh/oy3.jpg"
