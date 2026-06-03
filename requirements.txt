@@ -1,28 +1,35 @@
+# Bot Core & Network
 aiofiles
 aiohttp
 asyncio
-beautifulsoup4
-dnspython
-ffmpeg-python
-gitpython
-hachoir
-heroku3
 httpx[http2]==0.25.2
-motor
-numpy
-opencv-python
-pillow==9.5.0
-psutil
-py-tgcalls==0.9.7
-pykeyboard
-kurigram==2.1.35
+requests
 python-dotenv
 pyyaml
-requests
-speedtest-cli
-spotipy
+psutil
+dnspython
+motor
+
+# Telegram Bot & Calls
+kurigram==2.1.35
+py-tgcalls==0.9.7
 tgcrypto
+
+# Media & Music Processing
+ffmpeg-python
+opencv-python
+pillow>=10.0.0
+numpy
 unidecode
+hachoir
 yt-dlp
 youtube-search
 youtube-search-python
+spotipy
+speedtest-cli
+
+# Git & Management
+gitpython
+heroku3
+beautifulsoup4
+pykeyboard
