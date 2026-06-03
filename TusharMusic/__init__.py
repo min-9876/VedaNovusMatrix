@@ -1,3 +1,10 @@
+import asyncio
+import uvloop
+
+# Event Loop ကို အရင်ဆုံး စတင်သတ်မှတ်ပေးပါ
+asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+
+# ပြီးမှ ကျန်တဲ့ Import များကို ဆက်ရေးပါ
 from TusharMusic.core.bot import Tushar
 from TusharMusic.core.dir import dirr
 from TusharMusic.core.git import git
@@ -13,7 +20,6 @@ heroku()
 
 app = Tushar()
 userbot = Userbot()
-
 
 from .platforms import *
 
