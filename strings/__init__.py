@@ -1,34 +1,41 @@
 import os
-from typing import List
-
 import yaml
+from typing import List
 
 languages = {}
 languages_present = {}
 
-
 def get_string(lang: str):
-    return languages[lang]
+    return languages.get(lang, languages["en"])
 
+# path ကို လွယ်ကူအောင် ပြင်ရေးထားပါတယ်
+lang_path = "./strings/langs/"
 
-for filename in os.listdir(r"./strings/langs/"):
-    if "en" not in languages:
-        languages["en"] = yaml.safe_load(
-            open(r"./strings/langs/en.yml", encoding="utf8")
-        )
-        languages_present["en"] = languages["en"]["name"]
-    if filename.endswith(".yml"):
+# 'en.yml' ကို အရင်ဆုံးသေချာအောင် load လုပ်ပါ
+en_file = os.path.join(lang_path, "en.yml")
+if os.path.exists(en_file):
+    with open(en_file, encoding="utf8") as f:
+        languages["en"] = yaml.safe_load(f) or {}
+    languages_present["en"] = languages["en"].get("name", "English")
+else:
+    print("Error: en.yml not found!")
+    exit()
+
+# တခြား language ဖိုင်များကို loop ပတ်ပါ
+for filename in os.listdir(lang_path):
+    if filename.endswith(".yml") and filename != "en.yml":
         language_name = filename[:-4]
-        if language_name == "en":
-            continue
-        languages[language_name] = yaml.safe_load(
-            open(r"./strings/langs/" + filename, encoding="utf8")
-        )
-        for item in languages["en"]:
+        file_full_path = os.path.join(lang_path, filename)
+        
+        with open(file_full_path, encoding="utf8") as f:
+            data = yaml.safe_load(f)
+            
+            # ဖိုင်က None ဖြစ်နေရင် (အလွတ်ဖြစ်နေရင်) အလွတ် dict အဖြစ် ပြောင်းပေးပါ
+            languages[language_name] = data if data else {}
+            
+        # အဓိကပြင်ဆင်ချက် - 'en' ထဲမှာရှိတာတွေကို လိုအပ်ရင် ဖြည့်ပေးခြင်း
+        for item, value in languages["en"].items():
             if item not in languages[language_name]:
-                languages[language_name][item] = languages["en"][item]
-    try:
-        languages_present[language_name] = languages[language_name]["name"]
-    except:
-        print("There is some issue with the language file inside bot.")
-        exit()
+                languages[language_name][item] = value
+                
+        languages_present[language_name] = languages[language_name].get("name", language_name)
